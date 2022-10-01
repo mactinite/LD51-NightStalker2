@@ -50,7 +50,8 @@ public class CameraFollow : SingletonMonobehavior<CameraFollow>
 
     private void OnDisable()
     {
-        input.actions["Toggle Lock On"].performed -= TargetLock;
+        if(input != null)
+            input.actions["Toggle Lock On"].performed -= TargetLock;
     }
 
     private void TargetLock(InputAction.CallbackContext obj)

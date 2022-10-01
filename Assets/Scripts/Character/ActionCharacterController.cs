@@ -22,6 +22,8 @@ using UnityEngine.InputSystem;
         [Tooltip("The character's follow camera.")]
         public Transform playerCamera;
 
+        public bool cameraRelative = true;
+
         [Tooltip("The character's run speed.")]
         [SerializeField]
         private float _runSpeed = 5.0f;
@@ -154,8 +156,9 @@ using UnityEngine.InputSystem;
             
 
             // Transform moveDirection vector to be relative to camera view direction
-            moveDirection = moveDirection.relativeTo(playerCamera ? playerCamera : Camera.main.transform);
-
+            if(cameraRelative)
+                moveDirection = moveDirection.relativeTo(playerCamera != null ? playerCamera : Camera.main.transform);
+            
 
         }
 
@@ -167,7 +170,11 @@ using UnityEngine.InputSystem;
                 base.UpdateRotation();
             } else
             {
-                RotateTowards(playerCamera ? playerCamera.forward : Camera.main.transform.forward, true);
+                if(cameraRelative)
+                    RotateTowards(playerCamera != null ? playerCamera.forward : Camera.main.transform.forward, true);
+                else
+                    RotateTowards(transform.forward, true);
+
             }
         }
 

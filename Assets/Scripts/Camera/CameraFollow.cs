@@ -17,6 +17,9 @@ public class CameraFollow : SingletonMonobehavior<CameraFollow>
     private Transform _cameraTrackingTransform;
 
     public CinemachineVirtualCamera followCam;
+    public CinemachineVirtualCamera aimCam;
+
+    private bool aiming = false;
     public float smoothTime = 1f;
 
     private float _lastYPosition = 0;
@@ -42,11 +45,32 @@ public class CameraFollow : SingletonMonobehavior<CameraFollow>
             _cameraTrackingTransform = new GameObject("Camera Target").transform;
             _cameraTrackingTransform.forward = followTarget.forward;
             followCam.Follow = _cameraTrackingTransform;
+            aimCam.Follow = _cameraTrackingTransform;
         }
 
         SetCursorState(true);
         input.actions["Toggle Lock On"].performed += TargetLock;
+        input.actions["Aim"].started += ToggleAim;
+        input.actions["Aim"].canceled += ToggleAim;
     }
+
+    public void ToggleAim(InputAction.CallbackContext callbackContext)
+    {
+        aiming = !aiming;
+
+        if (aiming)
+        {
+            aimCam.Priority = 1;
+            followCam.Priority = 0;
+            
+        }
+        else
+        {
+            aimCam.Priority = 0;
+            followCam.Priority = 1;
+        }
+    }
+    
 
     private void OnDisable()
     {

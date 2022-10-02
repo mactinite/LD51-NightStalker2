@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.mactinite.extensibledamagesystem": "https://github.com/mactinite/DamageReceiver.git",
     "com.mactinite.toolboxcommons": "https://github.com/mactinite/UnityToolboxCommons.git",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "1.15.18",

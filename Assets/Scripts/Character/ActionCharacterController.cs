@@ -27,7 +27,11 @@ using UnityEngine.InputSystem;
         [Tooltip("The character's run speed.")]
         [SerializeField]
         private float _runSpeed = 5.0f;
-
+        
+        [Tooltip("The character's crouch speed.")]
+        [SerializeField]
+        private float _crouchSpeed = 2.0f;
+        
         [SerializeField] private GameObject visualsObject;
         
         [SerializeField]
@@ -78,7 +82,7 @@ using UnityEngine.InputSystem;
 
         private float GetTargetSpeed()
         {
-            return runSpeed;
+            return crouch ? _crouchSpeed : runSpeed;
         }
 
         /// <summary>

@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.mactinite.extensibledamagesystem": {
+      "version": "https://github.com/mactinite/DamageReceiver.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.0"
+      },
+      "hash": "55ea46a9c00cb84713db0cd0a5644a523e4773a9"
+    },
     "com.mactinite.toolboxcommons": {
       "version": "https://github.com/mactinite/UnityToolboxCommons.git",
       "depth": 0,

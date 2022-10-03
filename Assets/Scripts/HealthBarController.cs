@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class HealthBarController : MonoBehaviour
 {
     public Image fillImage;
-
+    public bool shakeOnChange = false;
+    public float shakeAmount = 0.2f;
     public float dampingSpeed;
     private float _currentValue = 1;
     private float _velocity = 0;
@@ -43,6 +44,12 @@ public class HealthBarController : MonoBehaviour
 
     public void SetValue(float val)
     {
+        if (shakeOnChange)
+        {
+            Vector3 shakeAxis = Vector3.one * shakeAmount;
+            iTween.PunchScale(gameObject,shakeAxis, 0.3f);
+        }
+
         _currentValue = val;
     }
 }

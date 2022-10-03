@@ -1184,10 +1184,10 @@ RectTransform:
   m_Father: {fileID: 1391823437}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165.5, y: -429.5}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -181, y: 96}
+  m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626180005
 MonoBehaviour:
@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 94a389a153ebf784e9871a543373d389, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1561,9 +1561,9 @@ GameObject:
   m_Component:
   - component: {fileID: 974526229}
   - component: {fileID: 974526228}
-  - component: {fileID: 974526227}
   - component: {fileID: 974526226}
   - component: {fileID: 974526225}
+  - component: {fileID: 974526230}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1638,14 +1638,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &974526227
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974526224}
-  m_Enabled: 1
 --- !u!20 &974526228
 Camera:
   m_ObjectHideFlags: 0
@@ -1704,6 +1696,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974526230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974526224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1003558888
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,7 +5617,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28774
+  m_Name: pb_Mesh28812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5868,6 +5873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1337068920}
   - component: {fileID: 1337068919}
+  - component: {fileID: 1337068921}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5903,6 +5909,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1337068921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337068918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b8e2262fb20ab408e6b84b8a94f2c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeFreqeuncy: 0.5
+  shakeAmplitude: 0.5
+  interval: 10
+  heartbeatIndicator: {fileID: 626180005}
 --- !u!43 &1376227979
 Mesh:
   m_ObjectHideFlags: 0
@@ -6522,7 +6544,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391754
+  m_Name: pb_Mesh28752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19175,7 +19197,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-100248
+  m_Name: pb_Mesh28826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19479,6 +19501,66 @@ MonoBehaviour:
   destroyed: 0
   wasDamagedThisFrame: 0
   iTime: 0.08
+--- !u!114 &4259436488323877837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759225142654138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b468ddd7c702384dbb98cb8424efe5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 4259436488323877839}
+  listenerLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  range: 10
+--- !u!114 &4259436488323877838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759225142654138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d34831f866e1441a4a4b6354afd302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartBeatSoundSource: {fileID: 4259436488323877837}
+--- !u!114 &4259436488323877839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759225142654138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1604046816
+      Data2: 1250473167
+      Data3: -811357018
+      Data4: 1940210777
+    Path: event:/Heart Beat
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &6947082838399810974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19924,6 +20006,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
         type: 3}
+      propertyPath: shakeAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
+        type: 3}
+      propertyPath: shakeOnChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
+        type: 3}
       propertyPath: damageReceiver
       value: 
       objectReference: {fileID: 4259436488323877830}
@@ -20015,7 +20107,7 @@ PrefabInstance:
     - target: {fileID: 8836581658981033016, guid: cfe747d18cfa3fe4cbee4374e04a9287,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 32
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8836581658981033016, guid: cfe747d18cfa3fe4cbee4374e04a9287,
         type: 3}

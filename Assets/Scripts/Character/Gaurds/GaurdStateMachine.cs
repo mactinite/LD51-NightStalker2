@@ -61,6 +61,7 @@ public class StandingIdle : State<GaurdStateMachine>
                 StateMachine.aquireTarget.lastSeenPosition = StateMachine.listener.soundLocation;
                 StateMachine.listener.newSound = false;
                 StateMachine.SetState("Searching");
+                yield break;
             }
             if(StateMachine.agent.remainingDistance <=0)
                 StateMachine.controller.RotateTowards(StateMachine.originalForward);

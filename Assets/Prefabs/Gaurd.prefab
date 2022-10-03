@@ -130,7 +130,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -466,6 +466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 534181627958939495}
+  shakeOnChange: 0
+  shakeAmount: 0
   dampingSpeed: 0.1
   damageReceiver: {fileID: 0}
 --- !u!1 &534181627958939493
@@ -1090,6 +1092,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
+        type: 3}
+      propertyPath: shakeAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
+        type: 3}
+      propertyPath: shakeOnChange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8836581658981033015, guid: cfe747d18cfa3fe4cbee4374e04a9287,
         type: 3}
